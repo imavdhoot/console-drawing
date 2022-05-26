@@ -50,6 +50,7 @@ C w h
 
 > Description: Should create a new canvas of width w and height h.
 
+<br><br>
 * Draw line
 ```bash
 L x1 y1 x2 y2
@@ -59,7 +60,7 @@ L x1 y1 x2 y2
 horizontal or vertical lines are supported. Horizontal and vertical lines
 will be drawn using the 'x' character.
 
-
+<br><br>
 * Draw Rectangle
 ```bash
 R x1 y1 x2 y2
@@ -69,6 +70,7 @@ R x1 y1 x2 y2
 lower right corner is (x2,y2). Horizontal and vertical lines will be drawn
 using the 'x' character.
 
+<br><br>
 * Draw Rectangle
 ```bash
 B x y c
@@ -78,6 +80,7 @@ B x y c
 behavior of this is the same as that of the "bucket fill" tool in paint
 programs.
 
+<br><br>
 * Quit
 ```bash
 Q
