@@ -34,8 +34,9 @@ npm test
 The command should be exactly matched to be executed.
 Some Invalid commands are as below where `<>` means a space
 e.g.
-* C<>5<><>5 : additional space after first operand
-* C<><>5<>5 : additional space after operator
+* C<>5<><>5 : additional space after first operand 
+* L<>5<><>5<>6<>9 : additional space after first operand
+* R<><>5<>5<>9<>6 : additional space after operator
 
 ### Implemention support
 - you can issue canvas create command multiple times
