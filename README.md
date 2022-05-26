@@ -47,15 +47,15 @@ It can draw line or reactangle again in coordinates that are filled with color.
 ```bash
 C w h
 ```
-* Description
-Should create a new canvas of width w and height h.
+
+> Description: Should create a new canvas of width w and height h.
 
 * Draw line
 ```bash
 L x1 y1 x2 y2
 ```
-* Description
-Should create a new line from (x1,y1) to (x2,y2). Currently only
+
+> Description: Should create a new line from (x1,y1) to (x2,y2). Currently only
 horizontal or vertical lines are supported. Horizontal and vertical lines
 will be drawn using the 'x' character.
 
@@ -64,8 +64,8 @@ will be drawn using the 'x' character.
 ```bash
 R x1 y1 x2 y2
 ```
-* Description
-Should create a new rectangle, whose upper left corner is (x1,y1) and
+
+> Description: Should create a new rectangle, whose upper left corner is (x1,y1) and
 lower right corner is (x2,y2). Horizontal and vertical lines will be drawn
 using the 'x' character.
 
@@ -73,8 +73,8 @@ using the 'x' character.
 ```bash
 B x y c
 ```
-* Description
-Should fill the entire area connected to (x,y) with "colour" c. The
+
+> Description: Should fill the entire area connected to (x,y) with "colour" c. The
 behavior of this is the same as that of the "bucket fill" tool in paint
 programs.
 
@@ -82,5 +82,5 @@ programs.
 ```bash
 Q
 ``` 		         
-* Description
-Should quit the program.
+
+> Description: Should quit the program.
