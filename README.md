@@ -28,7 +28,7 @@ npm test
 ```
 
 ## Problem statement
-- [please more details on the problem statement here](problem-statement.txt)
+- [please find more details on the problem statement here](problem-statement.txt)
 
 ### Assumptions
 The command should be exactly matched to be executed.
