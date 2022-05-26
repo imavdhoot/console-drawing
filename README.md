@@ -1,5 +1,5 @@
-# Console-drawing (typescript)
-practice javascript program for drawing on console
+# Console-drawing by AVD
+practice typescript program for drawing on console
 
 ### Support functionality
 
@@ -42,7 +42,8 @@ e.g.
 - you can issue canvas create command multiple times
 - supported small case commands
 - apart from vertical and horizontal lines, positive slope lines are also supported(i.e lines from 0,0 to x,y)
-- For color of Fill command, it only allows English alphabet, both small letter and capital letter
+- Bucket fill only supported till whole canvas gets filled and not multiple times
+- if required so, quit and run the program again
 
 It can draw line or reactangle again in coordinates that are filled with color.
 
