@@ -33,11 +33,14 @@ npm test
 ### Assumptions
 The command should be exactly matched to be executed.
 > e.g. Invalid commands, <> means a space
-C*5**5 : additional space
-C**55 : additional space
+> C<>5<><>5 : additional space
+> C<>55 : additional space
+
+### Implemention support
+- you can issue canvas create command multiple times
 - supported small case commands
-- For color of Fill command, it only allows English alphabet, both small letter and capital letter.
-- It doesn't allow to draw line or reactangle and fill wihtout Canvas.
+- apart from vertical and horizontal lines, positive slope lines are also supported(i.e lines from 0,0 to x,y)
+- For color of Fill command, it only allows English alphabet, both small letter and capital letter
 
 It can draw line or reactangle again in coordinates that are filled with color.
 

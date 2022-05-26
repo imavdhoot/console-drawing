@@ -9,16 +9,17 @@ const verify_1 = __importDefault(require("./verify"));
 const canvas_1 = __importDefault(require("./canvas"));
 function processCmd(ipData) {
     const data = ipData.split(' ');
-    console.log('command data: ', data);
+    // console.log('command data: ', data)
     if (!data || !data[0] || !data[0].toUpperCase()) {
         throw new Error(constants_1.default.ERRORS.INVALID_CMD);
     }
     const command = data[0].toUpperCase();
-    let error, canvasHt, canvasWd;
+    let error;
     switch (command) {
         case constants_1.default.COMMAND.QUIT:
             console.log(constants_1.default.MESSAGE.QUIT);
             process.exit();
+            break;
         case constants_1.default.COMMAND.CANVAS:
             error = verify_1.default.verifyCanvas(data);
             if (error)
@@ -34,12 +35,12 @@ function processCmd(ipData) {
         case constants_1.default.COMMAND.RECTANGLE:
             error = verify_1.default.verifyRectangle(data);
             if (error)
-                return error;
+                throw error;
             return canvas_1.default.rectangle(data);
         case constants_1.default.COMMAND.BUCKETFILL:
             error = verify_1.default.verifyBucketFill(data);
             if (error)
-                return error;
+                throw error;
             return canvas_1.default.bucketFill(data);
         default:
             throw new Error(constants_1.default.ERRORS.INVALID_CMD);

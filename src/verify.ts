@@ -1,7 +1,9 @@
 `use strict`
 
 import constants from './constants'
+import canvas from './canvas'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function verifyCanvas(cmdLine: string[]): any {
 	const width = parseInt(cmdLine[1])
 	const height = parseInt(cmdLine[2])
@@ -19,9 +21,12 @@ function verifyCanvas(cmdLine: string[]): any {
 	return
 }
 
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function verifyLine(cmdLine: string[]): any {
+
+	// eslint-disable-next-line @typescript-eslint/no-var-requires
 	const { width, height } = require('./canvas')
+
 	if (!width || !height) {
 		return new Error(constants.ERRORS.NO_CANVAS_EXIST)
 	}
@@ -49,7 +54,10 @@ function verifyLine(cmdLine: string[]): any {
 	return
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function verifyRectangle(cmdLine: string[]): any {
+
+	// eslint-disable-next-line @typescript-eslint/no-var-requires
 	const { width, height } = require('./canvas')
 	if (!width || !height) {
 		return new Error(constants.ERRORS.NO_CANVAS_EXIST)
@@ -80,8 +88,10 @@ function verifyRectangle(cmdLine: string[]): any {
 	return
 }
 
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function verifyBucketFill(cmdLine: string[]): any {
+
+	// eslint-disable-next-line @typescript-eslint/no-var-requires
 	const { width, height } = require('./canvas')
 	if (!width || !height) {
 		return new Error(constants.ERRORS.NO_CANVAS_EXIST)

@@ -2,8 +2,8 @@
 
 import constants from "./constants"
 
-
-let canvasMat: any = []
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const canvasMat: any = []
 let height = 0
 let width = 0
 
@@ -48,7 +48,7 @@ function line(cmdLine: string[]) {
 	if (x1 === x2) {
 		for (let y = 1; y < height; y++) {
 			if (y1 > y2) {
-				let temp = y1
+				const temp = y1
 				y1 = y2
 				y2 = temp
 			}
@@ -61,7 +61,7 @@ function line(cmdLine: string[]) {
 	} else 	if (y1 === y2) {
 		for (let x = 1; x < width; x++) {
 			if (x1 > x2) {
-				let temp = x1
+				const temp = x1
 				x1 = x2
 				x2 = temp
 			}
@@ -105,8 +105,8 @@ function rectangle(cmdLine: string[]) {
 
 	// lower right corner given first then swap
 	if (x1 > x2 && y1 > y2) {
-		let tempX = x1
-		let tempY = y1
+		const tempX = x1
+		const tempY = y1
 		x1 = x2
 		y1 = y2
 		x2 = tempX
@@ -129,8 +129,8 @@ function rectangle(cmdLine: string[]) {
 }
 
 function bucketFill(cmdLine: string[]) {
-	let x = parseInt(cmdLine[1])
-	let y = parseInt(cmdLine[2])
+	const x = parseInt(cmdLine[1])
+	const y = parseInt(cmdLine[2])
 	const fillChar = cmdLine[3]
 
 	if (canvasMat[y][x] === constants.CANVAS_CHAR.POINT) {
@@ -165,6 +165,7 @@ function bucketFillHelper(x: number, y: number, fillChar: string) {
 	bucketFillHelper(x+1, y, fillChar)
 	bucketFillHelper(x+1, y+1, fillChar)
 }
+
 
 export default {
 	create,

@@ -5,6 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 `use strict`;
 const constants_1 = __importDefault(require("./constants"));
+const canvas_1 = __importDefault(require("./canvas"));
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function verifyCanvas(cmdLine) {
     const width = parseInt(cmdLine[1]);
     const height = parseInt(cmdLine[2]);
@@ -12,10 +14,17 @@ function verifyCanvas(cmdLine) {
     if (isNaN(width) || isNaN(height)) {
         return new Error(constants_1.default.ERRORS.INVALID_CANVAS);
     }
+    //validate all canvas co-ordinates are numbers
+    if (width <= 0 || height <= 0) {
+        return new Error(constants_1.default.ERRORS.INVALID_CANVAS);
+    }
     return;
 }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function verifyLine(cmdLine) {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const { width, height } = require('./canvas');
+    console.log('#####', canvas_1.default);
     if (!width || !height) {
         return new Error(constants_1.default.ERRORS.NO_CANVAS_EXIST);
     }
@@ -37,7 +46,9 @@ function verifyLine(cmdLine) {
     }
     return;
 }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function verifyRectangle(cmdLine) {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const { width, height } = require('./canvas');
     if (!width || !height) {
         return new Error(constants_1.default.ERRORS.NO_CANVAS_EXIST);
@@ -61,7 +72,9 @@ function verifyRectangle(cmdLine) {
     }
     return;
 }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function verifyBucketFill(cmdLine) {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const { width, height } = require('./canvas');
     if (!width || !height) {
         return new Error(constants_1.default.ERRORS.NO_CANVAS_EXIST);
