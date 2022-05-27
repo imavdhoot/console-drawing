@@ -7,6 +7,14 @@ const canvasMat: any = []
 let height = 0
 let width = 0
 
+function resetCanvas() {
+	console.log('### resetCanvas')
+	width = 0
+	height = 0
+	module.exports.width = width
+	module.exports.height = height
+}
+
 function render() {
 	// render canvas on console
 	for (let y = 0; y <= height; y++) {
@@ -166,6 +174,7 @@ function bucketFillHelper(x: number, y: number, fillChar: string) {
 	bucketFillHelper(x+1, y+1, fillChar)
 }
 
+export { canvasMat, resetCanvas }
 
 export default {
 	create,

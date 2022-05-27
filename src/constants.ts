@@ -8,13 +8,16 @@ const constants = {
 	ERRORS: {
 		INVALID_CMD: 'invalid command',
 		INVALID_CANVAS: 'invalid create canvas command',
+		FLAT_CANVAS: 'invalid/flat create canvas command',
 		NO_CANVAS_EXIST: 'invalid command. please create canvas first',
 		INVALID_LINE: 'invalid line command/co-ordinates',
 		INVALID_LINE_LIMIT: 'invalid line co-ordinates. touching canvas border',
 		INVALID_RECTANGLE: 'invalid rectangle command/co-ordinates',
+		INVALID_RECTANGLE_LIMIT: 'invalid rectangle co-ordinates. touching canvas border',
 		FLAT_RECTANGLE: 'invalid rectangle co-ordinates. flat rectangle',
 		INVALID_FILL: 'invalid bucket fill command/co-ordinates',
-		INVALID_FILL_CHAR: 'invalid fill character. provide other character',
+		INVALID_FILL_LIMIT: 'invalid fill co-ordinates. touching canvas border',		
+		INVALID_FILL_CHAR: 'invalid fill character. provide other character than draw character',
 		INVALID_FILL_LOC: 'starting fill co-ordinates not empty'
 	},
 	COMMAND: {

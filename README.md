@@ -37,6 +37,8 @@ e.g.
 * C<>5<><>5 : additional space after first operand 
 * L<>5<><>5<>6<>9 : additional space after first operand
 * R<><>5<>5<>9<>6 : additional space after operator
+* commands with co-ordinates outside the canvas border are also invalid
+* Line,rectangle and bucketFill commands before canvas creation are also invalid
 
 ### Implemention support
 - you can issue canvas create command multiple times

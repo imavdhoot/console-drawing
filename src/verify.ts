@@ -15,7 +15,7 @@ function verifyCanvas(cmdLine: string[]): any {
 
 	//validate all canvas co-ordinates are numbers
 	if (width <= 0 || height <= 0) {
-		return new Error(constants.ERRORS.INVALID_CANVAS)
+		return new Error(constants.ERRORS.FLAT_CANVAS)
 	}	
 
 	return
@@ -25,7 +25,7 @@ function verifyCanvas(cmdLine: string[]): any {
 function verifyLine(cmdLine: string[]): any {
 
 	// eslint-disable-next-line @typescript-eslint/no-var-requires
-	const { width, height } = require('./canvas')
+	const { width, height } = require('./canvas')	
 
 	if (!width || !height) {
 		return new Error(constants.ERRORS.NO_CANVAS_EXIST)
@@ -43,12 +43,12 @@ function verifyLine(cmdLine: string[]): any {
 
 	//validate all co-ordinates are in canvas bound
 	if (x1 <= 0 || x2 <= 0 || y1 <= 0 || y2 <= 0) {
-		return new Error(constants.ERRORS.INVALID_LINE)
+		return new Error(constants.ERRORS.INVALID_LINE_LIMIT)
 	}
 
 	//validate all co-ordinates are in canvas bound
 	if (x1 >= width || x2 >= width || y1 >= height || y2 >= height) {
-		return new Error(constants.ERRORS.INVALID_LINE)
+		return new Error(constants.ERRORS.INVALID_LINE_LIMIT)
 	}	
 
 	return
@@ -59,6 +59,7 @@ function verifyRectangle(cmdLine: string[]): any {
 
 	// eslint-disable-next-line @typescript-eslint/no-var-requires
 	const { width, height } = require('./canvas')
+
 	if (!width || !height) {
 		return new Error(constants.ERRORS.NO_CANVAS_EXIST)
 	}
@@ -73,11 +74,11 @@ function verifyRectangle(cmdLine: string[]): any {
 	}
 
 	if (x1 <= 0 || x2 <= 0 || y1 <= 0 || y2 <= 0) {
-		return new Error(constants.ERRORS.INVALID_RECTANGLE)
+		return new Error(constants.ERRORS.INVALID_RECTANGLE_LIMIT)
 	}
 
 	if (x1 >= width || x2 >= width || y1 >= height || y2 >= height) {
-		return new Error(constants.ERRORS.INVALID_RECTANGLE)
+		return new Error(constants.ERRORS.INVALID_RECTANGLE_LIMIT)
 	}
 
 	//validate co-ordinates are not making flat rectangle
@@ -106,11 +107,11 @@ function verifyBucketFill(cmdLine: string[]): any {
 	}
 
 	if (x1 <= 0 || y1 <= 0) {
-		return new Error(constants.ERRORS.INVALID_FILL)
+		return new Error(constants.ERRORS.INVALID_FILL_LIMIT)
 	}
 
 	if (x1 >= width || y1 >= height) {
-		return new Error(constants.ERRORS.INVALID_FILL)
+		return new Error(constants.ERRORS.INVALID_FILL_LIMIT)
 	}
 
 	//validate fill character is not draw character
